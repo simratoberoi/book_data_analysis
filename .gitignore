@@ -1,0 +1,88 @@
+# Dependency directories
+/node_modules
+/jspm_packages
+
+# Production Build directory
+/build
+/dist
+/public/build
+/public/dist
+
+# Compiled output
+/dist
+/tmp
+.env
+.cache
+.parcel-cache
+.eslintcache
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.log
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvsuser
+*.njsproj
+*.sln
+*.sw?
+
+# System Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Environment variables
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Optional man-made files
+/coverage
+
+# Yarn integrity file
+.yarn-integrity
+
+# dotenv files
+.env
+.env.development
+.env.test
+.env.production
+.env.*.local
+
+# misc
+*.tgz
+.npmrc
+
+# Next.js
+.next/
+
+# Gatsby
+.cache/
+public/
+
+# Nuxt.js
+.nuxt/
+dist/
+
+# Sapper
+.sapper/
+
+# Vuepress
+.vuepress/dist/
+
+# Netlify
+.netlify/
+
+# Amplify
+.amplify-hosting/
