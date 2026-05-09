@@ -241,36 +241,6 @@ Name, Author, User Rating, Reviews, Price, Year, Genre
 - Check backend logs for errors
 - Ensure Pandas can parse CSV files
 
-### Port already in use
 
-```bash
-# Kill process on port 5000 (backend)
-lsof -i :5000 | grep LISTEN | awk '{print $2}' | xargs kill -9
 
-# Kill process on port 5173 (frontend)
-lsof -i :5173 | grep LISTEN | awk '{print $2}' | xargs kill -9
-```
 
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit changes (`git commit -m 'Add amazing feature'`)
-4. Push to branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## License
-
-This project is licensed under the MIT License - see LICENSE file for details.
-
-## Author
-
-Sam
-
-## Support
-
-For issues, questions, or suggestions, please open an issue on GitHub.
-
----
-
-**Happy analyzing!** 📚📊
