@@ -35,11 +35,14 @@ const Dashboard = () => {
       setLoading(true);
       setError(null);
 
+      const API_BASE_URL =
+        import.meta.env.VITE_API_URL || "http://localhost:5000";
+
       const [authorsRes, genreRes, yearlyRes, statsRes] = await Promise.all([
-        fetch("http://localhost:5000/api/top-authors"),
-        fetch("http://localhost:5000/api/genre-ratings"),
-        fetch("http://localhost:5000/api/yearly-ratings"),
-        fetch("http://localhost:5000/api/stats"),
+        fetch(`${API_BASE_URL}/api/top-authors`),
+        fetch(`${API_BASE_URL}/api/genre-ratings`),
+        fetch(`${API_BASE_URL}/api/yearly-ratings`),
+        fetch(`${API_BASE_URL}/api/stats`),
       ]);
 
       if (!authorsRes.ok || !genreRes.ok || !yearlyRes.ok || !statsRes.ok) {
@@ -47,7 +50,7 @@ const Dashboard = () => {
       }
 
       const [authorsData, genreData, yearlyData, statsData] = await Promise.all(
-        [authorsRes.json(), genreRes.json(), yearlyRes.json(), statsRes.json()]
+        [authorsRes.json(), genreRes.json(), yearlyRes.json(), statsRes.json()],
       );
 
       setData({
